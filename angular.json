@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TestingAng"
+    }
+  },
+  "defaultProject": "TestingAng",
+  "cli": {
+    "analytics": "e5a44232-d655-41b2-ae1d-21bc8d83e854"
+  }
 }

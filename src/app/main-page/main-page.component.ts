@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BudegetItem } from 'src/shared/models/budget-item.model';
+import { BudgetItem } from 'src/shared/models/budget-item.model';
 
 @Component({
   selector: 'app-main-page',
@@ -8,14 +8,18 @@ import { BudegetItem } from 'src/shared/models/budget-item.model';
 })
 export class MainPageComponent implements OnInit {
 
-  budgetItems: BudegetItem[] = new Array<BudegetItem>();
+  budgetItems: BudgetItem[] = new Array<BudgetItem>();
 
   constructor() { }
 
   ngOnInit(): void {
      
   }
-  addItem(newItem: BudegetItem){
+  addItem(newItem: BudgetItem){
     this.budgetItems.push(newItem)
+  }
+  deleteItem(item: BudgetItem){
+    let index = this.budgetItems.indexOf(item);
+    this.budgetItems.splice(index, 1);
   }
 }

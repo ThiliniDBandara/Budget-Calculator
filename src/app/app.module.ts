@@ -9,6 +9,7 @@ import { AddItemFormComponent } from './add-item-form/add-item-form.component';
 import { BudgetItemListComponent } from './budget-item-list/budget-item-list.component';
 import { BudgetItemCardComponent } from './budget-item-list/budget-item-card/budget-item-card.component';
 import { from } from 'rxjs';
+import { EditItemModalComponent } from './edit-item-modal/edit-item-modal.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { from } from 'rxjs';
     MainPageComponent,
     AddItemFormComponent,
     BudgetItemListComponent,
-    BudgetItemCardComponent
+    BudgetItemCardComponent,
+    EditItemModalComponent
   ],
   imports: [
     BrowserModule,

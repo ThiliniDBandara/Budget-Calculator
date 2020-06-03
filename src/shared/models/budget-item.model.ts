@@ -1,4 +1,3 @@
-export class BudegetItem {
-     
- constructor(public description: string, public amount: number){ }
+export class BudgetItem {
+ constructor(public description: string, public amount: number){}
 }

@@ -3,6 +3,35 @@
 .root{
     display: flex;
     width: 100%;
+    position: relative;
+    
+    &:hover{
+        .x-icon-button{
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    .x-icon-button {
+        position: absolute;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: $dark;
+        right: -17px;
+        top: -17px;
+        background-image: url('../../../assets/delete_icon.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+        transform: scale(0);
+
+        &:hover{
+            transform: scale(1.2);
+            cursor: pointer;
+        }
+    }
 }
 .budget-item{
     display: flex;
@@ -11,11 +40,18 @@
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.2s ease-out;
+
+    &:hover{
+        background-color: darken($light-grey, 5%);
+    }
 
     .description{
+        display: flex;
         flex-grow: 1;
         margin-left: 5px;
         font-size: 18px;
+        align-items: center;
     }
     .amount{
         padding: 5px;

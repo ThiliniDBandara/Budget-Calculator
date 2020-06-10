@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { BudgetItem } from 'src/shared/models/budget-item.model';
 
 @Component({
   selector: 'app-edit-item-modal',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./edit-item-modal.component.scss']
 })
 export class EditItemModalComponent implements OnInit {
-
+@Input() item: BudgetItem;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(updateItem: BudgetItem){
+    
   }
 
 }
